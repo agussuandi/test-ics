@@ -76,7 +76,7 @@
                                 <td>{{ $valUser->name }}</td>
                                 <td>{{ $valUser->username }}</td>
                                 <td>{{ $valUser->email }}</td>
-                                <td>Admin</td>
+                                <td>{{ $valUser->is_admin == 1 ? 'Admin' : 'Guest' }}</td>
                                 <td>{!! $valUser->is_active == 1 ? '<span class="badge bg-success">Active</span>' : '<span class="badge bg-danger">Inactive</span>' !!}</td>
                                 <td class="table-action">
                                     <a href="{{ url('/master-data/users/update/'.\Crypt::encryptString($valUser->id).'') }}"><i class="align-middle" data-feather="edit-2"></i></a>

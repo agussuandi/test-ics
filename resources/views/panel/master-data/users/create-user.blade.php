@@ -34,6 +34,13 @@
                     <label class="form-label">Password</label>
                     <input type="password" class="form-control" placeholder="Password" name="password">
                 </div>
+                <div class="mb-3">
+                    <label class="form-label">Access</label>
+                    <select class="form-control" name="is_admin">
+                        <option value="1">Admin</option>
+                        <option value="0">Guest</option>
+                    </select>
+                </div>
                 <button type="submit" class="btn btn-primary float-right">Submit</button>
             </form>
         </div>

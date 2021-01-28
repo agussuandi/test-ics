@@ -35,6 +35,13 @@
                     <input type="password" class="form-control" placeholder="Password" name="password">
                 </div>
                 <div class="mb-3">
+                    <label class="form-label">Access</label>
+                    <select class="form-control" name="is_admin">
+                        <option value="1" {{ $user->is_admin == 1 ? 'selected' : '' }}>Admin</option>
+                        <option value="0" {{ $user->is_admin == 0 ? 'selected' : '' }}>Guest</option>
+                    </select>
+                </div>
+                <div class="mb-3">
                     <label class="form-label">Status</label>
                     <select class="form-control" name="is_active">
                         <option value="1" {{ $user->is_active == 1 ? 'selected' : '' }}>Active</option>
